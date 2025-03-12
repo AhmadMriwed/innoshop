@@ -44,7 +44,7 @@
           @endif
       </ul>
   </nav>
-  <div class="text-secondary">共{{ $paginator->lastPage() }}页，</div>
-  <div class="text-secondary">共{{ $paginator->total() }}项</div>
+  <div class="text-secondary">شائع{{ $paginator->lastPage() }}صفحة، </div>
+  <div class="text-secondary">شائع{{ $paginator->total() }}غرض</div>
 </div>
 @endif

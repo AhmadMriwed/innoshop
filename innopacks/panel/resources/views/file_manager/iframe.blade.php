@@ -92,6 +92,6 @@
 
 @section('page-bottom-btns')
 <div class="page-bottom-btns" id="bottom-btns">
-    <button class="btn btn-primary" @click="handleConfirm">选择提交</button>
+    <button class="btn btn-primary" @click="handleConfirm">حدد إرسال</button>
 </div>
 @endsection

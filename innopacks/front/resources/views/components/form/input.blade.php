@@ -8,7 +8,7 @@
     @if ($error)
       {{ $error }}
     @else
-    请填写 {{ $title }}
+    يرجى ملء {{ $title }}
     @endif
   </span>
   {{ $slot }}

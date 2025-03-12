@@ -59,7 +59,7 @@ class CheckoutController extends Controller
         $checkout->updateValues($data);
         $result = $checkout->getCheckoutResult();
 
-        return json_success('更新成功', $result);
+        return json_success('تم التحديث ينجاح', $result);
     }
 
     /**

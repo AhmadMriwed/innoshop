@@ -18,24 +18,24 @@
             @csrf
             @method($customer->id ? 'PUT' : 'POST')
 
-            <x-common-form-image title="头像" name="avatar" value="{{ old('avatar', $customer->avatar) }}" required/>
+            <x-common-form-image title="الصورة الرمزية" name="avatar" value="{{ old('avatar', $customer->avatar) }}" required/>
 
             <x-common-form-input title="Email" name="email" value="{{ old('email', $customer->email) }}" required
                                  placeholder="Email"/>
 
-            <x-common-form-input title="名字" name="name" value="{{ old('name', $customer->name) }}" required
-                                 placeholder="名字"/>
+            <x-common-form-input title="الاسم" name="name" value="{{ old('name', $customer->name) }}" required
+                                 placeholder="الاسم"/>
 
-            <x-common-form-input title="密码" name="password" value="" placeholder="密码"/>
+            <x-common-form-input title="كلمة المرور" name="password" value="" placeholder="كلمة المرور"/>
 
-            <x-common-form-input title="来源" name="from" value="{{ old('from', $customer->from) }}"
-                                 placeholder="来源"/>
+            <x-common-form-input title="المصدر" name="from" value="{{ old('from', $customer->from) }}"
+                                 placeholder="المصدر"/>
 
-            <x-common-form-select title="用户组" name="customer_group_id" :options="$groups" key="id" label="name"
+            <x-common-form-select title="مجموعات المستخدمين" name="customer_group_id" :options="$groups" key="id" label="name"
                                   value="{{ old('customer_group_id', $customer->customer_group_id) }}"/>
             @hookinsert('panel.customer.form.group.after')
 
-            <x-common-form-select title="语言" name="locale" :options="$locales" key="code" label="name"
+            <x-common-form-select title="لغة" name="locale" :options="$locales" key="code" label="name"
                                   value="{{ old('locale', $customer->locale) }}"/>
 
             <x-common-form-switch-radio title="{{ __('panel/common.whether_enable') }}" name="active" :value="old('active', $page->active ?? true)"
@@ -139,7 +139,7 @@
     });
 
     function updataAddress(params) {
-      layer.msg('需要接口');
+      layer.msg('الواجهة المطلوبة');
       return;
       const id = new URLSearchParams(params).get('id');
       const href = @json(account_route('addresses.index'));

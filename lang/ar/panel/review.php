@@ -9,7 +9,7 @@
 
 return [
     'id'             => 'ID',
-    'review_content' => '评论内容',
-    'rating'         => '评级',
-    'product'        => '产品',
+    'review_content' => 'تعليقات',
+    'rating'         => 'تصنيف',
+    'product'        => 'منتج',
 ];

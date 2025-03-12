@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -36,271 +36,291 @@ class CategorySeeder extends Seeder
     private function getCategories(): array
     {
         return [
+            [ 'slug'         => 'all',
+            'position'     => 0,
+            'active'       => 1,
+            'translations' => [
+                [
+                    'locale'  => 'ar',
+                    'name'    => 'الكل',
+                    'content' => 'جميع المنتجات',
+                ],
+                [
+                    'locale'  => 'en',
+                    'name'    => 'All',
+                    'content' => 'All Products',
+                ],
+            ],],
+        
             [
-                'slug'         => 'women-clothing',
+             
+                'slug'         => 'protein',
                 'position'     => 1,
                 'active'       => 1,
                 'translations' => [
                     [
-                        'locale'  => 'zh_cn',
-                        'name'    => '女装',
-                        'content' => '女性时尚服装',
+                        'locale'  => 'ar',
+                        'name'    => 'البروتين',
+                        'content' => 'مكملات البروتين لدعم بناء العضلات',
                     ],
                     [
                         'locale'  => 'en',
-                        'name'    => 'Women',
-                        'content' => 'Fashion clothing for women',
+                        'name'    => 'Protein',
+                        'content' => 'Protein supplements to support muscle building',
                     ],
                 ],
                 'children' => [
                     [
-                        'slug'         => 'casual-wear',
+                        'slug'         => 'whey-protein',
                         'position'     => 1,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '休闲装',
-                                'content' => '休闲风格的女装',
+                                'locale'  => 'ar',
+                                'name'    => 'بروتين مصل اللبن',
+                                'content' => 'بروتين مصل اللبن عالي الجودة',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Casual Wear',
-                                'content' => 'Casual style women\'s clothing',
+                                'name'    => 'Whey Protein',
+                                'content' => 'High-quality whey protein',
                             ],
                         ],
                     ],
                     [
-                        'slug'         => 'formal-wear',
+                        'slug'         => 'plant-protein',
                         'position'     => 2,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '正装',
-                                'content' => '正式场合的女装',
+                                'locale'  => 'ar',
+                                'name'    => 'بروتين نباتي',
+                                'content' => 'بروتين نباتي مناسب للنباتيين',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Formal Wear',
-                                'content' => 'Formal women\'s clothing for special occasions',
+                                'name'    => 'Plant Protein',
+                                'content' => 'Plant-based protein suitable for vegans',
                             ],
                         ],
                     ],
                 ],
             ],
             [
-                'slug'         => 'men-clothing',
+                'slug'         => 'vitamins',
                 'position'     => 2,
                 'active'       => 1,
                 'translations' => [
                     [
-                        'locale'  => 'zh_cn',
-                        'name'    => '男装',
-                        'content' => '男性时尚服装',
+                        'locale'  => 'ar',
+                        'name'    => 'الفيتامينات',
+                        'content' => 'مكملات الفيتامينات لدعم الصحة العامة',
                     ],
                     [
                         'locale'  => 'en',
-                        'name'    => 'Men',
-                        'content' => 'Fashion clothing for men',
+                        'name'    => 'Vitamins',
+                        'content' => 'Vitamin supplements to support overall health',
                     ],
                 ],
                 'children' => [
                     [
-                        'slug'         => 'casual-wear-men',
+                        'slug'         => 'multivitamins',
                         'position'     => 1,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '休闲装',
-                                'content' => '休闲风格的男装',
+                                'locale'  => 'ar',
+                                'name'    => 'فيتامينات متعددة',
+                                'content' => 'فيتامينات متعددة لتلبية الاحتياجات اليومية',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Casual Wear',
-                                'content' => 'Casual style men\'s clothing',
+                                'name'    => 'Multivitamins',
+                                'content' => 'Multivitamins to meet daily needs',
                             ],
                         ],
                     ],
                     [
-                        'slug'         => 'business-wear',
+                        'slug'         => 'vitamin-d',
                         'position'     => 2,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '商务装',
-                                'content' => '商务场合的男装',
+                                'locale'  => 'ar',
+                                'name'    => 'فيتامين د',
+                                'content' => 'مكملات فيتامين د لدعم صحة العظام',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Business Wear',
-                                'content' => 'Business men\'s clothing for professional occasions',
+                                'name'    => 'Vitamin D',
+                                'content' => 'Vitamin D supplements to support bone health',
                             ],
                         ],
                     ],
                 ],
             ],
             [
-                'slug'         => 'children-clothing',
+                'slug'         => 'amino-acids',
                 'position'     => 3,
                 'active'       => 1,
                 'translations' => [
                     [
-                        'locale'  => 'zh_cn',
-                        'name'    => '童装',
-                        'content' => '儿童时尚服装',
+                        'locale'  => 'ar',
+                        'name'    => 'الأحماض الأمينية',
+                        'content' => 'مكملات الأحماض الأمينية لدعم الأداء الرياضي',
                     ],
                     [
                         'locale'  => 'en',
-                        'name'    => 'Children',
-                        'content' => 'Fashion clothing for children',
+                        'name'    => 'Amino Acids',
+                        'content' => 'Amino acid supplements to support athletic performance',
                     ],
                 ],
                 'children' => [
                     [
-                        'slug'         => 'boys-clothing',
+                        'slug'         => 'bcaa',
                         'position'     => 1,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '男童',
-                                'content' => '男童时尚服装',
+                                'locale'  => 'ar',
+                                'name'    => 'BCAA',
+                                'content' => 'مكملات BCAA لدعم بناء العضلات',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Boys',
-                                'content' => 'Fashion clothing for boys',
+                                'name'    => 'BCAA',
+                                'content' => 'BCAA supplements to support muscle building',
                             ],
                         ],
                     ],
                     [
-                        'slug'         => 'girls-clothing',
+                        'slug'         => 'glutamine',
                         'position'     => 2,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '女童',
-                                'content' => '女童时尚服装',
+                                'locale'  => 'ar',
+                                'name'    => 'جلوتامين',
+                                'content' => 'مكملات الجلوتامين لدعم التعافي',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Girls',
-                                'content' => 'Fashion clothing for girls',
+                                'name'    => 'Glutamine',
+                                'content' => 'Glutamine supplements to support recovery',
                             ],
                         ],
                     ],
                 ],
             ],
             [
-                'slug'         => 'sportswear',
+                'slug'         => 'pre-workout',
                 'position'     => 4,
                 'active'       => 1,
                 'translations' => [
                     [
-                        'locale'  => 'zh_cn',
-                        'name'    => '运动装',
-                        'content' => '运动风格的服装',
+                        'locale'  => 'ar',
+                        'name'    => 'ما قبل التمرين',
+                        'content' => 'مكملات ما قبل التمرين لتعزيز الأداء',
                     ],
                     [
                         'locale'  => 'en',
-                        'name'    => 'Sports',
-                        'content' => 'Clothing for sports activities',
+                        'name'    => 'Pre-Workout',
+                        'content' => 'Pre-workout supplements to enhance performance',
                     ],
                 ],
                 'children' => [
                     [
-                        'slug'         => 'sports-clothing',
+                        'slug'         => 'energy-boosters',
                         'position'     => 1,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '运动服',
-                                'content' => '适合运动的服装',
+                                'locale'  => 'ar',
+                                'name'    => 'معززات الطاقة',
+                                'content' => 'مكملات لتعزيز الطاقة قبل التمرين',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Sports Clothing',
-                                'content' => 'Clothing designed for sports',
+                                'name'    => 'Energy Boosters',
+                                'content' => 'Supplements to boost energy before workouts',
                             ],
                         ],
                     ],
                     [
-                        'slug'         => 'sports-accessories',
+                        'slug'         => 'pump-enhancers',
                         'position'     => 2,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '运动配件',
-                                'content' => '运动所需的配件',
+                                'locale'  => 'ar',
+                                'name'    => 'معززات الضخ',
+                                'content' => 'مكملات لتعزيز ضخ الدم أثناء التمرين',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Sports Accessories',
-                                'content' => 'Accessories needed for sports',
+                                'name'    => 'Pump Enhancers',
+                                'content' => 'Supplements to enhance blood pump during workouts',
                             ],
                         ],
                     ],
                 ],
             ],
+           
             [
-                'slug'         => 'accessories',
+                'slug'         => 'post-workout',
                 'position'     => 5,
                 'active'       => 1,
                 'translations' => [
                     [
-                        'locale'  => 'zh_cn',
-                        'name'    => '配饰',
-                        'content' => '服装搭配的配饰',
+                        'locale'  => 'ar',
+                        'name'    => 'ما بعد التمرين',
+                        'content' => 'مكملات ما بعد التمرين للتعافي',
                     ],
                     [
                         'locale'  => 'en',
-                        'name'    => 'Accessories',
-                        'content' => 'Accessories for clothing',
+                        'name'    => 'Post-Workout',
+                        'content' => 'Post-workout supplements for recovery',
                     ],
                 ],
                 'children' => [
                     [
-                        'slug'         => 'hats',
+                        'slug'         => 'recovery-drinks',
                         'position'     => 1,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '帽子',
-                                'content' => '各种款式的帽子',
+                                'locale'  => 'ar',
+                                'name'    => 'مشروبات التعافي',
+                                'content' => 'مشروبات لتعافي العضلات بعد التمرين',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Hats',
-                                'content' => 'Various styles of hats',
+                                'name'    => 'Recovery Drinks',
+                                'content' => 'Drinks for muscle recovery after workouts',
                             ],
                         ],
                     ],
                     [
-                        'slug'         => 'scarves',
+                        'slug'         => 'protein-shakes',
                         'position'     => 2,
                         'active'       => 1,
                         'translations' => [
                             [
-                                'locale'  => 'zh_cn',
-                                'name'    => '围巾',
-                                'content' => '各种款式的围巾',
+                                'locale'  => 'ar',
+                                'name'    => 'مخفوقات البروتين',
+                                'content' => 'مخفوقات البروتين لدعم التعافي',
                             ],
                             [
                                 'locale'  => 'en',
-                                'name'    => 'Scarves',
-                                'content' => 'Various styles of scarves',
+                                'name'    => 'Protein Shakes',
+                                'content' => 'Protein shakes to support recovery',
                             ],
                         ],
                     ],
                 ],
             ],
+         
+        
         ];
     }
 }

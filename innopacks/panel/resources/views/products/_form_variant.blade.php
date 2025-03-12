@@ -64,7 +64,7 @@
                     <div class="delete-icon" v-else></div>
                   </div>
                   <div class="add-variant-btns">
-                    {{-- <div class="text-secondary text-12 mb-2">按回车键新增一行</div> --}}
+                    {{-- <div class="text-secondary text-12 mb-2">اضغط على Enter لإضافة سطر جديد</div> --}}
                     <div class="text-primary text-12 mb-3">
                       <div class="d-inline-block cursor-pointer" @click="addVariantValue(index)"><i class="bi bi-plus-lg"></i> {{ __('panel/product.add_variant_value') }}</div>
                     </div>
@@ -241,7 +241,7 @@
       // SKU Code 批量填写
       const batchFillSkuCode = () => {
         if (!batchData.value.skuPrefix) {
-          layer.msg('请输入SKU前缀', {icon: 2});
+          layer.msg('الرجاء إدخال بادئة SKU', {icon: 2});
           return;
         }
 
@@ -250,13 +250,13 @@
           sku.code = `${batchData.value.skuPrefix}-${suffix}`;
         });
 
-        layer.msg('SKU Code 已批量填写', {icon: 1});
+        layer.msg('SKU Code تم ملء الدفعة', {icon: 1});
       };
 
       // 其他列的批量填写
       const batchFillColumn = (column) => {
         if (!batchData.value[column]) {
-          layer.msg('请输入要填写的值', {icon: 2});
+          layer.msg('الرجاء إدخال القيمة المراد ملؤها', {icon: 2});
           return;
         }
 
@@ -271,7 +271,7 @@
           sku[columnMap[column]] = batchData.value[column];
         });
 
-        layer.msg('批量填写成功', {icon: 1});
+        layer.msg('تم تعبئة الدفعة بنجاح', {icon: 1});
       };
 
       if (typeof variants.value === 'string') {
@@ -286,7 +286,7 @@
         $('#product-form').on('submit', function(e) {
           if (!validateForm()) {
             e.preventDefault();
-            layer.msg('请至少填写单规格信息或添加多规格商品信息', {icon: 2});
+            layer.msg('يرجى ملء معلومات مواصفات واحدة على الأقل أو إضافة معلومات المنتج الخاصة بمواصفات متعددة', {icon: 2});
             return false;
           }
         });
@@ -581,7 +581,7 @@
         $('#product-form').on('submit', function(e) {
           if (!validateForm()) {
             e.preventDefault();
-            layer.msg('请至少填写单规格信息或添加多规格商品信息', {icon: 2});
+            layer.msg('يرجى ملء معلومات مواصفات واحدة على الأقل أو إضافة معلومات المنتج الخاصة بمواصفات متعددة', {icon: 2});
             return false;
           }
         });
@@ -595,8 +595,8 @@
           const singleSkuCode = $('input[name="skus[0][code]"]').val();
 
           if (singleSkuPrice || singleSkuQuantity || singleSkuCode) {
-            layer.confirm('切换到多规格后，单规格信息将被忽略，是否继续？', {
-              btn: ['继续', '取消']
+            layer.confirm('بعد التبديل إلى مواصفات متعددة، سيتم تجاهل معلومات المواصفات الفردية. هل تريد الاستمرار؟ ', {
+              btn: ['يكمل', 'يلغي']
             }, function() {
               // 用户确认后，可以选择将单规格数据作为第一个多规格的默认值
               const firstSku = skus.value[0];
@@ -719,7 +719,7 @@
   // 将数组分为指定组
   function splitArrayIntoGroups(array, groupCount) {
     if (groupCount <= 0) {
-      throw new Error('组的数量必须大于 0');
+      throw new Error('يجب أن يكون عدد المجموعات اللاحقة أكبر من عدد المجموعات اللاحقة 0');
     }
 
     const result = [];

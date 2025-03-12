@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -31,14 +31,6 @@ class ArticleSeeder extends Seeder
                 Article\Translation::query()->create($item);
             }
         }
-
-        $items = $this->getArticleTags();
-        if ($items) {
-            Article\Tag::query()->truncate();
-            foreach ($items as $item) {
-                Article\Tag::query()->create($item);
-            }
-        }
     }
 
     /**
@@ -50,39 +42,31 @@ class ArticleSeeder extends Seeder
             [
                 'id'         => 1,
                 'catalog_id' => 1,
-                'slug'       => 'innoshop-innovative-open-source-ecommerce',
+                'slug'       => 'fitboost-top-supplements-for-performance',
                 'position'   => 0,
-                'viewed'     => 16,
-                'author'     => 'InnoShop',
+                'viewed'     => 25,
+                'author'     => 'Fit Boost',
                 'active'     => 1,
             ],
             [
                 'id'         => 2,
                 'catalog_id' => 1,
-                'slug'       => null,
-                'position'   => 0,
-                'viewed'     => 16,
-                'author'     => 'InnoShop',
+                'slug'       => 'fitboost-ultimate-guide-to-nutrition',
+                'position'   => 1,
+                'viewed'     => 30,
+                'author'     => 'Fit Boost',
                 'active'     => 1,
             ],
-            [
-                'id'         => 3,
-                'catalog_id' => 2,
-                'slug'       => null,
-                'position'   => 0,
-                'viewed'     => 16,
-                'author'     => null,
-                'active'     => 1,
-            ],
-            [
-                'id'         => 4,
-                'catalog_id' => 2,
-                'slug'       => null,
-                'position'   => 0,
-                'viewed'     => 16,
-                'author'     => 'InnoShop',
-                'active'     => 1,
-            ],
+     
+            // [
+            //     'id'         => 2,
+            //     'catalog_id' => 1,
+            //     'slug'       => null,
+            //     'position'   => 0,
+            //     'viewed'     => 18,
+            //     'author'     => 'Fit Boost',
+            //     'active'     => 1,
+            // ],
         ];
     }
 
@@ -94,111 +78,49 @@ class ArticleSeeder extends Seeder
         return [
             [
                 'article_id'       => 1,
-                'locale'           => 'zh_cn',
-                'title'            => 'InnoShop - 创新电商，智选未来',
-                'summary'          => 'InnoShop，一个以创新为核心的开源电商平台，致力于提供灵活、可扩展的电商解决方案。我们的产品管理功能全面，包括产品分类、添加、库存及价格管理等，旨在帮助商家轻松管理商品，提升运营效率。',
-                'image'            => 'images/demo/news/1.jpg',
-                'content'          => '欢迎访问 <a href="https://www.innoshop.cn/" target="_blank" rel="noopener">InnoShop 中文官方网站</a> 了解更多信息。',
-                'meta_title'       => 'InnoShop - 创新电商，智选未来',
-                'meta_description' => 'InnoShop - 创新电商，智选未来',
-                'meta_keywords'    => 'InnoShop - 创新电商，智选未来',
+                'locale'           => 'en',
+                'title'            => 'Top Supplements for Peak Performance',
+                'summary'          => 'Fit Boost provides high-quality supplements to enhance your fitness journey.',
+                // 'image'            => 'images/demo/news/1.jpg',
+                'image'            => 'images/demo/product/whey-protein-group.png', 
+                'content'          => 'Discover the best supplements for energy, endurance, and muscle recovery.',
+                'meta_title'       => 'Fit Boost - Best Supplements',
+                'meta_description' => 'Find the best supplements to boost your performance.',
+                'meta_keywords'    => 'supplements, fitness, performance, nutrition',
             ],
             [
                 'article_id'       => 1,
-                'locale'           => 'en',
-                'title'            => 'InnoShop - Innovative ecommerce',
-                'summary'          => 'InnoShop，An open-source e-commerce platform with innovation',
-                'image'            => 'images/demo/news/1.jpg',
-                'content'          => 'This is english test article',
-                'meta_title'       => 'InnoShop - Innovative ecommerce',
-                'meta_description' => 'InnoShop - Innovative ecommerce',
-                'meta_keywords'    => 'InnoShop - Innovative ecommerce',
-            ],
-            [
-                'article_id'       => 2,
-                'locale'           => 'zh_cn',
-                'title'            => 'InnoShop - 创新电商，智选未来',
-                'summary'          => 'InnoShop，一个以创新为核心的开源电商平台，致力于提供灵活、可扩展的电商解决方案。我们的产品管理功能全面，包括产品分类、添加、库存及价格管理等，旨在帮助商家轻松管理商品，提升运营效率。',
-                'image'            => 'images/demo/news/2.jpg',
-                'content'          => '欢迎访问 <a href="https://www.innoshop.cn/" target="_blank" rel="noopener">InnoShop 中文官方网站</a> 了解更多信息。',
-                'meta_title'       => 'InnoShop - 创新电商，智选未来',
-                'meta_description' => 'InnoShop - 创新电商，智选未来',
-                'meta_keywords'    => 'InnoShop - 创新电商，智选未来',
+                'locale'           => 'ar',
+                'title'            => 'أفضل المكملات لتعزيز الأداء الرياضي',
+                'summary'          => 'يقدم Fit Boost مكملات غذائية عالية الجودة لتحسين رحلتك الرياضية.',
+                // 'image'            => 'images/demo/news/1.jpg',
+                'image'            => 'images/demo/product/whey-protein-group.png', 
+                'content'          => 'اكتشف أفضل المكملات للطاقة والتحمل والتعافي العضلي.',
+                'meta_title'       => 'Fit Boost - أفضل المكملات',
+                'meta_description' => 'تعرف على أفضل المكملات لتعزيز أدائك الرياضي.',
+                'meta_keywords'    => 'مكملات, لياقة, أداء, تغذية',
             ],
             [
                 'article_id'       => 2,
                 'locale'           => 'en',
-                'title'            => 'New generation ecommerce system',
-                'summary'          => 'InnoShop，An open-source e-commerce platform with innovation',
-                'image'            => 'images/demo/news/2.jpg',
-                'content'          => 'This is english test article',
-                'meta_title'       => 'InnoShop - Innovative ecommerce',
-                'meta_description' => 'InnoShop - Innovative ecommerce',
-                'meta_keywords'    => 'InnoShop - Innovative ecommerce',
+                'title'            => 'The Ultimate Guide to Nutrition for Fitness',
+                'summary'          => 'Learn everything about nutrition to maximize your fitness goals with Fit Boost.',
+                'image'            => 'images/demo/product/nutrition-guide.png',
+                'content'          => 'Explore the importance of balanced nutrition for boosting your performance and health.',
+                'meta_title'       => 'Fit Boost - Ultimate Nutrition Guide',
+                'meta_description' => 'Discover the essential nutrients that support your fitness goals.',
+                'meta_keywords'    => 'nutrition, fitness, health, performance',
             ],
             [
-                'article_id'       => 3,
-                'locale'           => 'zh_cn',
-                'title'            => 'InnoShop - 创新电商，智选未来',
-                'summary'          => 'InnoShop，一个以创新为核心的开源电商平台，致力于提供灵活、可扩展的电商解决方案。我们的产品管理功能全面，包括产品分类、添加、库存及价格管理等，旨在帮助商家轻松管理商品，提升运营效率。',
-                'image'            => 'images/demo/news/3.jpg',
-                'content'          => '欢迎访问 <a href="https://www.innoshop.cn/" target="_blank" rel="noopener">InnoShop 中文官方网站</a> 了解更多信息。',
-                'meta_title'       => 'InnoShop - 创新电商，智选未来',
-                'meta_description' => 'InnoShop - 创新电商，智选未来',
-                'meta_keywords'    => 'InnoShop - 创新电商，智选未来',
-            ],
-            [
-                'article_id'       => 3,
-                'locale'           => 'en',
-                'title'            => 'Ecommerce integrated with AI',
-                'summary'          => 'InnoShop，An open-source e-commerce platform with innovation',
-                'image'            => 'images/demo/news/3.jpg',
-                'content'          => 'This is english test article',
-                'meta_title'       => 'InnoShop - Innovative ecommerce',
-                'meta_description' => 'InnoShop - Innovative ecommerce',
-                'meta_keywords'    => 'InnoShop - Innovative ecommerce',
-            ],
-            [
-                'article_id'       => 4,
-                'locale'           => 'zh_cn',
-                'title'            => 'InnoShop - 创新电商，智选未来',
-                'summary'          => 'InnoShop，一个以创新为核心的开源电商平台，致力于提供灵活、可扩展的电商解决方案。我们的产品管理功能全面，包括产品分类、添加、库存及价格管理等，旨在帮助商家轻松管理商品，提升运营效率。',
-                'image'            => 'images/demo/news/4.jpg',
-                'content'          => '欢迎访问 <a href="https://www.innoshop.cn/" target="_blank" rel="noopener">InnoShop 中文官方网站</a> 了解更多信息。',
-                'meta_title'       => 'InnoShop - 创新电商，智选未来',
-                'meta_description' => 'InnoShop - 创新电商，智选未来',
-                'meta_keywords'    => 'InnoShop - 创新电商，智选未来',
-            ],
-            [
-                'article_id'       => 4,
-                'locale'           => 'en',
-                'title'            => 'New version released!',
-                'summary'          => 'InnoShop，An open-source e-commerce platform with innovation',
-                'image'            => 'images/demo/news/4.jpg',
-                'content'          => 'This is english test article',
-                'meta_title'       => 'InnoShop - Innovative ecommerce',
-                'meta_description' => 'InnoShop - Innovative ecommerce',
-                'meta_keywords'    => 'InnoShop - Innovative ecommerce',
-            ],
-        ];
-
-    }
-
-    /**
-     * @return \int[][]
-     */
-    private function getArticleTags(): array
-    {
-        return [
-            [
-                'id'         => 1,
-                'article_id' => 1,
-                'tag_id'     => 1,
-            ],
-            [
-                'id'         => 2,
-                'article_id' => 1,
-                'tag_id'     => 2,
+                'article_id'       => 2,
+                'locale'           => 'ar',
+                'title'            => 'الدليل الشامل للتغذية من أجل اللياقة البدنية',
+                'summary'          => 'تعرف على كل ما تحتاجه عن التغذية لتحقيق أهدافك الرياضية مع Fit Boost.',
+                'image'            => 'images/demo/product/nutrition-guide.png',
+                'content'          => 'استكشف أهمية التغذية المتوازنة لتعزيز أدائك وصحتك.',
+                'meta_title'       => 'Fit Boost - دليل التغذية الشامل',
+                'meta_description' => 'اكتشف العناصر الغذائية الأساسية التي تدعم أهدافك الرياضية.',
+                'meta_keywords'    => 'تغذية, لياقة, صحة, أداء',
             ],
         ];
     }

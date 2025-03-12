@@ -29,7 +29,7 @@
         <span class="text-muted" style="font-size: 12px">
       <i class="bi bi-info-circle"></i> {{ __('panel/common.up_image_text') }}
             @if ($max)
-                ，最多上传(<span class="imgs-count">{{ count($values) }}</span>/{{ $max }})张
+                ，تحميل ما يصل إلى(<span class="imgs-count">{{ count($values) }}</span>/{{ $max }})فتح
             @endif
     </span>
         {{ $slot }}
@@ -129,11 +129,11 @@
                             _self.before(item);
                             _self.parents('.is-up-file-pure').find('.imgs-count').text(_self.parents('.is-up-file-pure').find('.img-upload-item').length - 1);
                         } else {
-                            layer.msg(response.message || '上传失败', {icon: 2});
+                            layer.msg(response.message || 'فشل التحميل', {icon: 2});
                         }
                     })
                     .catch(function (error) {
-                        layer.msg(error.response?.message || '上传失败', {icon: 2});
+                        layer.msg(error.response?.message || 'فشل التحميل', {icon: 2});
                     })
                     .finally(function () {
                         _self.find('.img-loading').addClass('d-none');

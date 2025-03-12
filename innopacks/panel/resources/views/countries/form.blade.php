@@ -12,11 +12,11 @@
       @csrf
       @method($country->id ? 'PUT' : 'POST')
 
-      <x-common-form-input title="名称" name="name" :value="old('name', $country->name ?? '')" required placeholder="名称" />
-      <x-common-form-input title="编码" name="code" :value="old('code', $country->code ?? '')" required placeholder="编码" />
-      <x-common-form-image title="标识" name="image" :value="old('image', $country->image ?? '')" placeholder="image" />
-      <x-common-form-input title="排序" name="position" :value="old('position', $country->slug ?? '')" required placeholder="排序" />
-      <x-common-form-input title="启用" name="active" :value="old('active', $country->active ?? '')" placeholder="启用" />
+      <x-common-form-input title="الاسم" name="name" :value="old('name', $country->name ?? '')" required placeholder="الاسم" />
+      <x-common-form-input title="الرمز" name="code" :value="old('code', $country->code ?? '')" required placeholder="الرمز" />
+      <x-common-form-image title="الصورة" name="image" :value="old('image', $country->image ?? '')" placeholder="image" />
+      <x-common-form-input title="فرز" name="position" :value="old('position', $country->slug ?? '')" required placeholder="فرز" />
+      <x-common-form-input title="تمكين" name="active" :value="old('active', $country->active ?? '')" placeholder="تمكين" />
 
       <div class="form-row mt-5 d-flex">
         <div class="wp-200 pe-2"></div>

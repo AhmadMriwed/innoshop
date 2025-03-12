@@ -119,7 +119,7 @@
                   <div class="left">
                     <i class="bi bi-circle"></i>
                     <div class="select-title">
-                      <span class="name"> @{{ quote.name }}</span> &nbsp;&nbsp;
+                      <span class="name"> @{{ quote.name??"Fixed shipping fee" }}</span> &nbsp;&nbsp;
                       <span class="cost"> @{{ quote.cost_format }}</span>
                     </div>
                   </div>
@@ -141,7 +141,7 @@
                    @click="updateCheckout('billing_method_code', item.code)">
                 <div class="left">
                   <i class="bi bi-circle"></i>
-                  <div class="select-title">@{{ item.name }}</div>
+                  <div class="select-title">@{{ item.name ??"~  Cach 💵 "}}</div>
                 </div>
                 <div class="icon"><img :src="item.icon" class="img-fluid"></div>
               </div>

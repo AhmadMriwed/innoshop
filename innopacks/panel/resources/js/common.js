@@ -57,7 +57,7 @@ export default {
 
   imgUploadAjax(file, _self, callback = null) {
     if (file.type.indexOf('image') === -1) {
-        alert('请上传图片文件');
+        alert('يرجى تحميل ملف الصورة');
         return;
     }
 

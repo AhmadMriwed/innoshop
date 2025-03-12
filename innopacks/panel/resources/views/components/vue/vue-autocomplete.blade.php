@@ -7,7 +7,7 @@
           class="wp-400"
           value-key="name"
           :fetch-suggestions="querySearchAsync"
-          placeholder="搜索"
+          placeholder="بحث"
           @select="handleSelect"
       >
         <template #prepend><i class="bi bi-search"></i></template>

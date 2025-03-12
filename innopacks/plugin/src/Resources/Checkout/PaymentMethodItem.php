@@ -26,7 +26,7 @@ class PaymentMethodItem extends JsonResource
     public function toArray(Request $request): array
     {
         $pluginResource = (new PluginResource($this->plugin))->jsonSerialize();
-
+       
         return [
             'type'        => $pluginResource['type'],
             'code'        => $pluginResource['code'],

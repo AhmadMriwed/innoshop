@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -29,19 +29,43 @@ class BrandSeeder extends Seeder
     {
         return [
             [
-                'name'     => 'Adidas',
-                'slug'     => 'adidas',
-                'first'    => 'A',
-                'logo'     => 'images/brands/adidas.png',
+                'name'     => 'Optimum Nutrition',
+                'slug'     => 'optimum-nutrition',
+                'first'    => 'O',
+                'logo'     => 'images/brands/optimum-nutrition.png',
                 'position' => 0,
                 'active'   => true,
             ],
             [
-                'name'     => 'Nike',
-                'slug'     => 'nike',
-                'first'    => 'N',
-                'logo'     => 'images/brands/nike.png',
+                'name'     => 'MuscleTech',
+                'slug'     => 'muscletech',
+                'first'    => 'M',
+                'logo'     => 'images/brands/muscletech.png',
                 'position' => 1,
+                'active'   => true,
+            ],
+            [
+                'name'     => 'Dymatize',
+                'slug'     => 'dymatize',
+                'first'    => 'D',
+                'logo'     => 'images/brands/dymatize.png',
+                'position' => 2,
+                'active'   => true,
+            ],
+            [
+                'name'     => 'BSN',
+                'slug'     => 'bsn',
+                'first'    => 'B',
+                'logo'     => 'images/brands/bsn.png',
+                'position' => 3,
+                'active'   => true,
+            ],
+            [
+                'name'     => 'MyProtein',
+                'slug'     => 'myprotein',
+                'first'    => 'M',
+                'logo'     => 'images/brands/myprotein.png',
+                'position' => 4,
                 'active'   => true,
             ],
         ];

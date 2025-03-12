@@ -11,7 +11,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use InnoShop\Common\Models\Admin;
-
+use Illuminate\Support\Facades\Hash;
 class AdminSeeder extends Seeder
 {
     public function run(): void
@@ -30,11 +30,13 @@ class AdminSeeder extends Seeder
      */
     private function getAdmins(): array
     {
+        $password = Hash::make('12345678');
+      
         return [
             [
                 'name'     => 'admin',
-                'email'    => 'admin@innoshop.com',
-                'password' => '$2y$10$tsjDyAkcFU0qWuJpo3pAae/6PwtQi/AhSR4giHqmjehTJb4B0W0fi',
+                'email' => 'admin@gmail.com',
+                'password' =>$password,//'$2y$10$tsjDyAkcFU0qWuJpo3pAae/6PwtQi/AhSR4giHqmjehTJb4B0W0fi',
                 'active'   => true,
                 'locale'   => 'en',
             ],

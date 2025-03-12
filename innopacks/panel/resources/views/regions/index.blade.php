@@ -84,8 +84,8 @@
         <table class="table table-bordered regions-table">
           <thead>
             <tr>
-              <th width="40%">国家/地区</th>
-              <th width="40%">省份</th>
+              <th width="40%">البل /المنطقة</th>
+              <th width="40%">مقاطعة</th>
               <th width="20%" class="text-end"></th>
             </tr>
           </thead>

@@ -9,9 +9,9 @@
 
 return [
     'news_blog'            => 'News Blog',
-    'news_blog_text'       => 'We\'ve curated a curated selection of apparel and now present it to you at a limited-time discount. Take advantage of this opportunity for a great value shopping experience that will.',
-    'feature_product'      => 'Feature Product',
-    'feature_product_text' => 'Embrace your style with this chic garment, blending comfort and elegance. A must-have for any occasion, it\'s the perfect addition to your wardrobe.',
-    'bestseller'           => 'Bestseller',
+    'feature_product_text' => 'Boost your performance and health with our premium supplements. Made from high-quality ingredients to support your energy, enhance recovery, and improve your daily performance. Whether you\'re looking to increase strength, endurance, or overall wellness, our products are the perfect choice to help you reach your goals. Start your journey to a healthier lifestyle today!'
+,'feature_product'      => 'Feature Product',
+'news_blog_text' => 'Discover the power of proper nutrition with Fit Boost! Stay updated with the latest articles and tips on supplements and the best ways to support your health and fitness.',
+'bestseller'           => 'Bestseller',
     'new_arrival'          => 'New Arrival',
 ];

@@ -17,7 +17,7 @@
              class="text-dark text-decoration-none">{{ $product['name'] }}</a></h5>
 
         @if($product['seller_name'])
-          <p class="card-text text-start mx-3 mb-1">作者：
+          <p class="card-text text-start mx-3 mb-1">مؤلف:  
             <span class="panel-text-primary">{{ $product['seller_name'] }}</span>
           </p>
         @endif

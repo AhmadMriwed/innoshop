@@ -16,10 +16,10 @@
       @csrf
       @method($brand->id ? 'PUT' : 'POST')
 
-      <x-common-form-input title="名称" name="name" value="{{ old('name', $brand->name) }}" required placeholder="名称" />
-      <x-common-form-image title="图标" name="logo" value="{{ old('logo', $brand->logo) }}" required />
-      <x-common-form-input title="首字母" name="first" value="{{ old('first', $brand->first) }}" required placeholder="首字母" />
-      <x-common-form-input title="启用" name="position" value="{{ old('position', $brand->position) }}" placeholder="启用" />
+      <x-common-form-input title="اسم" name="name" value="{{ old('name', $brand->name) }}" required placeholder="اسم" />
+      <x-common-form-image title="رمز" name="logo" value="{{ old('logo', $brand->logo) }}" required />
+      <x-common-form-input title="الأحرف الأولى" name="first" value="{{ old('first', $brand->first) }}" required placeholder="الأحرف الأولى" />
+      <x-common-form-input title="يُمكَِن" name="position" value="{{ old('position', $brand->position) }}" placeholder="يُمكَِن" />
       <x-common-form-switch-radio title="{{ __('panel/common.whether_enable') }}" name="active" :value="old('active', $page->active ?? true)" placeholder="{{ __('panel/common.whether_enable') }}"/>
       <x-common-form-input title="{{ __('panel/common.slug') }}" name="slug" value="{{ old('slug', $brand->slug) }}" placeholder="{{ __('panel/common.slug') }}" />
 

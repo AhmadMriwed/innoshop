@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -36,8 +36,8 @@ class CustomerGroupSeeder extends Seeder
                 'mini_cost'     => 0,
                 'discount_rate' => 100,
                 'translations'  => [
-                    ['locale' => 'en', 'name' => 'Account', 'description' => 'Account'],
-                    ['locale' => 'zh_cn', 'name' => '会员', 'description' => '会员等级'],
+                    ['locale' => 'ar', 'name' => 'عادي', 'description' => 'مجموعة العملاء العادية'],
+                    ['locale' => 'en', 'name' => 'Regular', 'description' => 'Regular customer group'],
                 ],
             ],
             [
@@ -45,8 +45,17 @@ class CustomerGroupSeeder extends Seeder
                 'mini_cost'     => 1000,
                 'discount_rate' => 95,
                 'translations'  => [
-                    ['locale' => 'en', 'name' => 'VIP', 'description' => 'VIP'],
-                    ['locale' => 'zh_cn', 'name' => 'VIP', 'description' => 'VIP'],
+                    ['locale' => 'ar', 'name' => 'VIP', 'description' => 'مجموعة العملاء VIP'],
+                    ['locale' => 'en', 'name' => 'VIP', 'description' => 'VIP customer group'],
+                ],
+            ],
+            [
+                'level'         => 3,
+                'mini_cost'     => 5000,
+                'discount_rate' => 90,
+                'translations'  => [
+                    ['locale' => 'ar', 'name' => 'مميز', 'description' => 'مجموعة العملاء المميزة'],
+                    ['locale' => 'en', 'name' => 'Premium', 'description' => 'Premium customer group'],
                 ],
             ],
         ];

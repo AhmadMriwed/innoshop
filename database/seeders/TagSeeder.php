@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -41,20 +41,26 @@ class TagSeeder extends Seeder
         return [
             [
                 'id'       => 1,
-                'slug'     => 'ecommerce',
+                'slug'     => 'protein',
                 'position' => 1,
                 'active'   => 1,
             ],
             [
                 'id'       => 2,
-                'slug'     => 'opensource',
+                'slug'     => 'vitamins',
                 'position' => 2,
                 'active'   => 1,
             ],
             [
                 'id'       => 3,
-                'slug'     => 'export',
-                'position' => 2,
+                'slug'     => 'fitness',
+                'position' => 3,
+                'active'   => 1,
+            ],
+            [
+                'id'       => 4,
+                'slug'     => 'health',
+                'position' => 4,
                 'active'   => 1,
             ],
         ];
@@ -65,38 +71,47 @@ class TagSeeder extends Seeder
      */
     private function getTagTranslations(): array
     {
-        return
+        return [
             [
-                [
-                    'tag_id' => 1,
-                    'locale' => 'zh_cn',
-                    'name'   => '电商',
-                ],
-                [
-                    'tag_id' => 1,
-                    'locale' => 'en',
-                    'name'   => 'Ecommerce',
-                ],
-                [
-                    'tag_id' => 2,
-                    'locale' => 'zh_cn',
-                    'name'   => '开源',
-                ],
-                [
-                    'tag_id' => 2,
-                    'locale' => 'en',
-                    'name'   => 'Open Source',
-                ],
-                [
-                    'tag_id' => 3,
-                    'locale' => 'zh_cn',
-                    'name'   => '外贸',
-                ],
-                [
-                    'tag_id' => 3,
-                    'locale' => 'en',
-                    'name'   => 'Export',
-                ],
-            ];
+                'tag_id' => 1,
+                'locale' => 'ar',
+                'name'   => 'بروتين',
+            ],
+            [
+                'tag_id' => 1,
+                'locale' => 'en',
+                'name'   => 'Protein',
+            ],
+            [
+                'tag_id' => 2,
+                'locale' => 'ar',
+                'name'   => 'فيتامينات',
+            ],
+            [
+                'tag_id' => 2,
+                'locale' => 'en',
+                'name'   => 'Vitamins',
+            ],
+            [
+                'tag_id' => 3,
+                'locale' => 'ar',
+                'name'   => 'لياقة بدنية',
+            ],
+            [
+                'tag_id' => 3,
+                'locale' => 'en',
+                'name'   => 'Fitness',
+            ],
+            [
+                'tag_id' => 4,
+                'locale' => 'ar',
+                'name'   => 'صحة',
+            ],
+            [
+                'tag_id' => 4,
+                'locale' => 'en',
+                'name'   => 'Health',
+            ],
+        ];
     }
 }

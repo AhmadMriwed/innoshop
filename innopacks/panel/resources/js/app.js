@@ -112,7 +112,7 @@ $(function () {
     // 打开文件管理器
     layer.open({
       type: 2,
-      title: '文件管理器',
+      title: 'File Manager',
       shadeClose: false,
       shade: 0.8,
       area: ['90%', '90%'],
@@ -144,7 +144,7 @@ const tinymceInit = () => {
     imagetools_toolbar: '',
     toolbar_mode: 'wrap',
     font_formats:
-      "微软雅黑='Microsoft YaHei';黑体=黑体;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Georgia=georgia,palatino;Helvetica=helvetica;Times New Roman=times new roman,times;Verdana=verdana,geneva",
+      "微软雅黑'Microsoft YaHei';Bold=bold;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Georgia=georgia,palatino;Helvetica=helvetica;Times New Roman=times new roman,times;Verdana=verdana,geneva",
     fontsize_formats: "10px 12px 14px 16px 18px 24px 36px 48px 56px 72px 96px",
     lineheight_formats: "1 1.1 1.2 1.3 1.4 1.5 1.7 2.4 3 4",
     setup: function (ed) {

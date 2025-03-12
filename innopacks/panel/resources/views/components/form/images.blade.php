@@ -30,7 +30,7 @@
     <span class="text-muted" style="font-size: 12px">
       <i class="bi bi-info-circle"></i> {{ __('panel/common.up_image_text') }}
       @if ($max)
-      ，最多上传(<span class="imgs-count">{{ count($values) }}</span>/{{ $max }})张
+      ，تحميل ما يصل إلى(<span class="imgs-count">{{ count($values) }}</span>/{{ $max }})فتح
       @endif
     </span>
     {{ $slot }}

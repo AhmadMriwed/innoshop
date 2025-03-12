@@ -145,7 +145,7 @@ class PluginRepo
     public function getBillingMethods(): Collection
     {
         $allPlugins = $this->allPlugins();
-
+     
         return $allPlugins->where('type', 'billing')->filter(function ($item) {
             $plugin = plugin($item->code);
             if ($plugin) {

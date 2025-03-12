@@ -85,7 +85,7 @@ $(function () {
         });
 
         if (isErrorMsg) {
-          inno.msg('请检查表单是否填写正确');
+          inno.msg('يرجى التحقق مما إذا تم ملء النموذج بشكل صحيح');
         }
       },
       false

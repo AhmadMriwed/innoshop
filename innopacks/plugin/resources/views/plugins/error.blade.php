@@ -1,6 +1,6 @@
 @extends('panel::layouts.app')
 
-@section('title', '插件详情')
+@section('title', 'تفاصيل البرنامج الإضافي')
 
 @section('content')
   <div class="card h-min-600">

@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -47,6 +47,8 @@ class PluginSeeder extends Seeder
         return [
             ['type' => 'shipping', 'code' => 'fixed_shipping', 'priority' => 0],
             ['type' => 'billing', 'code' => 'bank_transfer', 'priority' => 0],
+            ['type' => 'billing', 'code' => 'cach', 'priority' => 0],
+            ['type' => 'discount', 'code' => 'loyalty_discount', 'priority' => 1], // إضافة جديدة
         ];
     }
 
@@ -56,15 +58,32 @@ class PluginSeeder extends Seeder
     private function getSettings(): array
     {
         return [
+            // إعدادات الشحن
             ['space' => 'fixed_shipping', 'name' => 'active', 'value' => '1'],
             ['space' => 'fixed_shipping', 'name' => 'type', 'value' => 'fixed'],
-            ['space' => 'fixed_shipping', 'name' => 'value', 'value' => '2'],
-            ['space' => 'bank_transfer', 'name' => 'active', 'value' => '1'],
-            ['space' => 'bank_transfer', 'name' => 'bank_name', 'value' => 'Bank of America'],
-            ['space' => 'bank_transfer', 'name' => 'bank_account', 'value' => '12345678910'],
-            ['space' => 'bank_transfer', 'name' => 'bank_username', 'value' => 'Sam'],
-            ['space' => 'bank_transfer', 'name' => 'bank_comment', 'value' => ''],
+            ['space' => 'fixed_shipping', 'name' => 'value', 'value' => '5'], // تكلفة الشحن الثابتة (5 دولارات)
+            ['space' => 'fixed_shipping', 'name' => 'free_shipping_threshold', 'value' => '100'], // شحن مجاني للطلبات فوق 100 دولار
+
+            // إعدادات التحويل البنكي
+            ['space' => 'bank_transfer', 'name' => 'active', 'value' => '0'],
+            ['space' => 'bank_transfer', 'name' => 'bank_name', 'value' => 'البنك التجاري السوري'],
+            ['space' => 'bank_transfer', 'name' => 'bank_account', 'value' => '1234567890'],
+            ['space' => 'bank_transfer', 'name' => 'bank_username', 'value' => 'Fit Boost'],
+            ['space' => 'bank_transfer', 'name' => 'bank_comment', 'value' => 'يرجى إضافة رقم الطلب في وصف التحويل'],
             ['space' => 'bank_transfer', 'name' => 'available', 'value' => ['pc_web', 'mobile_web']],
+
+     // إعدادات التحويل البنكي
+     ['space' => 'bank_transfer', 'name' => 'active', 'value' => '1'],
+     ['space' => 'bank_transfer', 'name' => 'bank_name', 'value' => 'Payment Cach (حوالة \ نقدي)'],
+     ['space' => 'bank_transfer', 'name' => 'bank_account', 'value' => '(دمشق) (صفوان احمد المحمود) (+963 930 021 883)'],
+     ['space' => 'bank_transfer', 'name' => 'bank_username', 'value' => 'Fit Boost'],
+     ['space' => 'bank_transfer', 'name' => 'bank_comment', 'value' => 'الدفع عند الاستلام أو عن طريق حوالة'],
+     ['space' => 'bank_transfer', 'name' => 'available', 'value' => ['pc_web', 'mobile_web']],
+
+            // إعدادات خصم الولاء (إضافة جديدة)
+            ['space' => 'loyalty_discount', 'name' => 'active', 'value' => '1'],
+            ['space' => 'loyalty_discount', 'name' => 'discount_rate', 'value' => '10'], // خصم 10% للعملاء المخلصين
+            ['space' => 'loyalty_discount', 'name' => 'min_purchases', 'value' => '5'], // الحد الأدنى للطلبات المؤهلة
         ];
     }
 }

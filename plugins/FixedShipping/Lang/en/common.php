@@ -8,8 +8,8 @@
  */
 
 return [
-    'type'    => 'Type',
-    'fixed'   => 'Fixed',
-    'percent' => 'Percent',
-    'value'   => 'Value',
+    'type'    => 'النوع',
+    'fixed'   => 'ثابت',
+    'percent' => 'نسبة مئوية',
+    'value'   => 'القيمة',
 ];

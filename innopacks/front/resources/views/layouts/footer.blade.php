@@ -80,10 +80,10 @@
         <div class="row">
           <div class="col-md-6">
             <div class="left-links">
-              Powered By <a href="https://www.innoshop.com" target="_blank">InnoShop</a>
+            
               <!-- Powered By InnoShop {{ innoshop_version() }} -->
               <span class="copyright-text">
-                <a href="{{ front_route('home.index') }}" class="ms-2" target="_blank">{{ config('app.name') }}</a>
+              Powered By <a href="{{ front_route('home.index') }}" class="ms-2" target="_blank">{{ config('app.name') }}</a>
                 &copy; {{ date('Y') }} All Rights Reserved
                 @if(system_setting('icp_number'))
                   <a href="https://beian.miit.gov.cn" class="ms-2" target="_blank">{{ system_setting('icp_number') }}</a>

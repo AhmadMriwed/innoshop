@@ -30,7 +30,7 @@ $(function () {
         $('.invalid-feedback').each(function (index, el) {
           if ($(el).css('display') == 'block') {
             if (index == 0) {
-              inno.alert({msg: '请检查表单是否填写正确', type: 'danger'});
+              inno.alert({msg: 'يرجى التحقق مما إذا تم ملء النموذج بشكل صحيح', type: 'danger'});
             }
 
             // 兼容使用 element ui input、autocomplete 组件，在传统提交报错ui显示

@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -42,17 +42,17 @@ class TaxSeeder extends Seeder
         return [
             [
                 'id'        => 1,
-                'region_id' => 1,
-                'name'      => 'Test Tax',
+                'region_id' => 1, // المنطقة الافتراضية (دمشق)
+                'name'      => 'ضريبة ثابتة',
                 'type'      => 'fixed',
-                'rate'      => 2,
+                'rate'      => 5, // 5 دولارات كضريبة ثابتة
             ],
             [
                 'id'        => 2,
-                'region_id' => 1,
-                'name'      => 'Demo Tax',
+                'region_id' => 1, // المنطقة الافتراضية (دمشق)
+                'name'      => 'ضريبة النسبة المئوية',
                 'type'      => 'percent',
-                'rate'      => 10,
+                'rate'      => 10, // 10% كضريبة نسبة مئوية
             ],
         ];
     }
@@ -65,8 +65,18 @@ class TaxSeeder extends Seeder
         return [
             [
                 'id'          => 1,
-                'name'        => 'Fashion',
-                'description' => 'Fashion Tax',
+                'name'        => 'مكملات غذائية',
+                'description' => 'فئة ضريبية للمكملات الغذائية',
+            ],
+            [
+                'id'          => 2,
+                'name'        => 'فيتامينات',
+                'description' => 'فئة ضريبية للفيتامينات',
+            ],
+            [
+                'id'          => 3,
+                'name'        => 'بروتين',
+                'description' => 'فئة ضريبية للبروتين',
             ],
         ];
     }

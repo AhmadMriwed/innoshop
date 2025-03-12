@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -11,8 +11,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use InnoShop\Common\Models\Country;
-use InnoShop\Common\Models\Region;
 use InnoShop\Common\Models\State;
+use InnoShop\Common\Models\Region;
 use InnoShop\Common\Repositories\RegionRepo;
 
 class RegionSeeder extends Seeder
@@ -37,13 +37,14 @@ class RegionSeeder extends Seeder
      */
     private function getRegions(): array
     {
-        $country = Country::query()->where('code', 'US')->first();
-        $state   = State::query()->where('country_id', $country->id)->where('code', 'CA')->first();
+        // الحصول على بيانات سوريا
+        $country = Country::query()->where('code', 'SY')->first();
+        $state   = State::query()->where('country_id', $country->id)->where('code', 'DI')->first(); // DI = دمشق
 
         return [
             [
-                'name'          => 'US-CA',
-                'description'   => 'California, United States of America',
+                'name'          => 'SY-DI',
+                'description'   => 'دمشق، سوريا',
                 'position'      => 0,
                 'active'        => true,
                 'region_states' => [

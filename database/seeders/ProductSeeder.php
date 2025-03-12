@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -37,281 +37,130 @@ class ProductSeeder extends Seeder
     {
         return [
             [
-                'brand_id'     => 1,
-                'spu_code'     => 'galaxy-glow-evening-gown',
-                'slug'         => 'galaxy-glow-evening-gown',
+                'brand_id'     => 1, // افترض أن العلامة التجارية 1 هي Optimum Nutrition
+                'spu_code'     => 'whey-protein',
+                'slug'         => 'whey-protein',
                 'translations' => [
                     [
-                        'locale' => 'zh_cn',
-                        'name'   => '银河流光璀璨晚礼服闪耀全场',
+                        'locale' => 'ar',
+                        'name'   => 'بروتين مصل اللبن',
                     ],
                     [
                         'locale' => 'en',
-                        'name'   => 'Galaxy Glittering Evening Gown Shines Everywhere',
+                        'name'   => 'Whey Protein',
                     ],
                 ],
                 'skus' => [
                     [
-                        'code'         => 'GGE001',
-                        'image'        => 'images/demo/product/1.png',
-                        'price'        => 111.00,
-                        'origin_price' => 112.00,
-                        'quantity'     => 50,
-                        'variants'     => [0, 0],
+                        'code'         => 'WP001',
+                        'image'        => 'images/demo/product/whey-protein.png',
+                        'price'        => 50.00,
+                        'origin_price' => 60.00,
+                        'quantity'     => 100,
                         'is_default'   => true,
                     ],
-                    [
-                        'code'         => 'GGE002',
-                        'image'        => 'images/demo/product/1.png',
-                        'price'        => 222.00,
-                        'origin_price' => 223.00,
-                        'quantity'     => 50,
-                        'variants'     => [0, 1],
-                    ],
-                    [
-                        'code'         => 'GGE003',
-                        'image'        => 'images/demo/product/1.png',
-                        'price'        => 333.00,
-                        'origin_price' => 334.00,
-                        'quantity'     => 50,
-                        'variants'     => [1, 0],
-                    ],
-                    [
-                        'code'         => 'GGE004',
-                        'image'        => 'images/demo/product/1.png',
-                        'price'        => 444.00,
-                        'origin_price' => 445.00,
-                        'quantity'     => 50,
-                        'variants'     => [1, 1],
-                    ],
-                    [
-                        'code'         => 'GGE005',
-                        'image'        => 'images/demo/product/1.png',
-                        'price'        => 555.00,
-                        'origin_price' => 556.00,
-                        'quantity'     => 50,
-                        'variants'     => [2, 0],
-                    ],
-                    [
-                        'code'         => 'GGE006',
-                        'image'        => 'images/demo/product/1.png',
-                        'price'        => 666.00,
-                        'origin_price' => 667.00,
-                        'quantity'     => 50,
-                        'variants'     => [2, 1],
-                    ],
                 ],
-                'variables' => [
-                    [
-                        'name'   => ['en' => 'Color', 'zh_cn' => '颜色'],
-                        'values' => [
-                            ['image' => '', 'name' => ['en' => 'Red', 'zh_cn' => '红色']],
-                            ['image' => '', 'name' => ['en' => 'Green', 'zh_cn' => '绿色']],
-                            ['image' => '', 'name' => ['en' => 'Blue', 'zh_cn' => '蓝色']],
-                        ],
-                    ],
-                    [
-                        'name'   => ['en' => 'Size', 'zh_cn' => '尺寸'],
-                        'values' => [
-                            ['image' => '', 'name' => ['en' => 'Big', 'zh_cn' => '大']],
-                            ['image' => '', 'name' => ['en' => 'Small', 'zh_cn' => '小']],
-                        ],
-                    ],
-                ],
-
-                'categories' => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+                'categories' => [1,2], // افترض أن الفئة 1 هي "بروتين"
             ],
             [
-                'brand_id'     => 1,
-                'spu_code'     => 'urban-elite-suit-jacket',
-                'slug'         => 'urban-elite-suit-jacket',
+                'brand_id'     => 2, // افترض أن العلامة التجارية 2 هي MuscleTech
+                'spu_code'     => 'mass-gainer',
+                'slug'         => 'mass-gainer',
                 'translations' => [
                     [
-                        'locale' => 'zh_cn',
-                        'name'   => '都市精英风尚西装外套经典剪裁'],
+                        'locale' => 'ar',
+                        'name'   => 'مكمل زيادة الكتلة',
+                    ],
                     [
                         'locale' => 'en',
-                        'name'   => 'Urban Elite Fashion Suit Jacket Classic Cut',
+                        'name'   => 'Mass Gainer',
                     ],
                 ],
                 'skus' => [
                     [
-                        'code'         => 'UES002',
-                        'image'        => 'images/demo/product/2.png',
-                        'price'        => 599.99,
-                        'origin_price' => null,
-                        'quantity'     => 30,
-                    ],
-                ],
-                'categories' => [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-            ],
-            [
-                'brand_id'     => 1,
-                'slug'         => 'dawn-stroll-light-trench',
-                'translations' => [
-                    [
-                        'locale' => 'zh_cn',
-                        'name'   => '晨曦漫步轻盈薄款风衣春意盎然',
-                    ],
-                    [
-                        'locale' => 'en',
-                        'name'   => 'Dawn Stroll Lightweight Spring Trench Coat',
-                    ],
-                ],
-                'skus' => [
-                    [
-                        'code'         => 'DSLT003',
-                        'image'        => 'images/demo/product/3.png',
-                        'price'        => 399.99,
-                        'origin_price' => 2199.99,
-                        'quantity'     => 40,
-                    ],
-                ],
-                'categories' => [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-            ],
-            [
-                'brand_id'     => 1,
-                'slug'         => 'star-orbit-casual-sweater',
-                'translations' => [
-                    [
-                        'locale' => 'zh_cn',
-                        'name'   => '星辰轨迹个性休闲卫衣夜空星辰',
-                    ],
-                    [
-                        'locale' => 'en',
-                        'name'   => 'Starry Track Personalized Casual Sweater Night Sky Stars',
-                    ],
-                ],
-                'skus' => [
-                    [
-                        'code'         => 'SOCS004',
-                        'image'        => 'images/demo/product/4.png',
-                        'price'        => 299.99,
-                        'origin_price' => 2199.99,
-                        'quantity'     => 60,
-                    ],
-                ],
-                'categories' => [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-            ],
-            [
-                'brand_id'     => 1,
-                'slug'         => 'rainbow-fringe-scarf',
-                'translations' => [
-                    [
-                        'locale' => 'zh_cn',
-                        'name'   => '幻彩流苏时尚个性围巾绚丽多彩',
-                    ],
-                    [
-                        'locale' => 'en',
-                        'name'   => 'Colorful Tassel Fashion Personalized Scarf Bright and Colorful',
-                    ],
-                ],
-                'skus' => [
-                    [
-                        'code'         => 'RFS005',
-                        'image'        => 'images/demo/product/5.png',
-                        'price'        => 199.99,
-                        'origin_price' => 2199.99,
-                        'quantity'     => 70,
-                    ],
-                ],
-                'categories' => [1, 2, 3,  5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-            ],
-            [
-                'brand_id'     => 2,
-                'slug'         => 'minimalist-classic-shirt',
-                'translations' => [
-                    [
-                        'locale' => 'zh_cn',
-                        'name'   => '极简风格主义经典衬衫简约不简单',
-                    ],
-                    [
-                        'locale' => 'en',
-                        'name'   => 'Minimalist Style Classic Shirt Simple but Not Simple',
-                    ],
-                ],
-                'skus' => [
-                    [
-                        'code'         => 'MSCS006',
-                        'image'        => 'images/demo/product/6.png',
-                        'price'        => 99.66,
-                        'origin_price' => null,
+                        'code'         => 'MG001',
+                        'image'        => 'images/demo/product/mass-gainer.png',
+                        'price'        => 70.00,
+                        'origin_price' => 80.00,
                         'quantity'     => 80,
                     ],
                 ],
-                'categories' => [1, 2, 3, 4,  6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+                'categories' => [1,3], // افترض أن الفئة 2 هي "زيادة الكتلة"
             ],
             [
-                'brand_id'     => 2,
-                'slug'         => 'retro-high-waist-jeans',
+                'brand_id'     => 3, // افترض أن العلامة التجارية 3 هي Dymatize
+                'spu_code'     => 'bcaa',
+                'slug'         => 'bcaa',
                 'translations' => [
                     [
-                        'locale' => 'zh_cn',
-                        'name'   => '摩登复古风高腰牛仔裤经典再现',
+                        'locale' => 'ar',
+                        'name'   => 'أحماض أمينية متفرعة السلسلة',
                     ],
                     [
                         'locale' => 'en',
-                        'name'   => 'Modern Retro Style High-Waist Jeans Classic Reappearance',
+                        'name'   => 'BCAA',
                     ],
                 ],
                 'skus' => [
                     [
-                        'code'         => 'MRHWJ007',
-                        'image'        => 'images/demo/product/7.png',
-                        'price'        => 69.66,
-                        'origin_price' => null,
+                        'code'         => 'BCAA001',
+                        'image'        => 'images/demo/product/bcaa.png',
+                        'price'        => 30.00,
+                        'origin_price' => 35.00,
+                        'quantity'     => 120,
+                    ],
+                ],
+                'categories' => [1,4], // افترض أن الفئة 3 هي "أحماض أمينية"
+            ],
+            [
+                'brand_id'     => 4, // افترض أن العلامة التجارية 4 هي BSN
+                'spu_code'     => 'pre-workout',
+                'slug'         => 'pre-workout',
+                'translations' => [
+                    [
+                        'locale' => 'ar',
+                        'name'   => 'مكمل ما قبل التمرين',
+                    ],
+                    [
+                        'locale' => 'en',
+                        'name'   => 'Pre-Workout',
+                    ],
+                ],
+                'skus' => [
+                    [
+                        'code'         => 'PW001',
+                        'image'        => 'images/demo/product/pre-workout.png',
+                        'price'        => 40.00,
+                        'origin_price' => 45.00,
                         'quantity'     => 90,
                     ],
                 ],
-                'categories' => [1, 2, 3, 4, 5,  7, 8, 9, 10, 11, 12, 13, 14, 15],
+                'categories' => [1,5], // افترض أن الفئة 4 هي "ما قبل التمرين"
             ],
             [
-                'brand_id'     => 2,
-                'slug'         => 'elegant-lace-sexy-top',
+                'brand_id'     => 5, // افترض أن العلامة التجارية 5 هي MyProtein
+                'spu_code'     => 'vitamin-d',
+                'slug'         => 'vitamin-d',
                 'translations' => [
                     [
-                        'locale' => 'zh_cn',
-                        'name'   => '优雅蕾丝边透视性感上衣女性魅力',
+                        'locale' => 'ar',
+                        'name'   => 'فيتامين د',
                     ],
                     [
                         'locale' => 'en',
-                        'name'   => 'Elegant Lace Transparent Sexy Top Female Charm',
+                        'name'   => 'Vitamin D',
                     ],
                 ],
                 'skus' => [
                     [
-                        'code'         => 'ELSXT008',
-                        'image'        => 'images/demo/product/8.png',
-                        'price'        => 49.66,
-                        'origin_price' => null,
-                        'quantity'     => 100,
+                        'code'         => 'VD001',
+                        'image'        => 'images/demo/product/vitamin-d.png',
+                        'price'        => 20.00,
+                        'origin_price' => 25.00,
+                        'quantity'     => 150,
                     ],
                 ],
-                'categories' => [1, 2, 3, 4, 5,  6, 8, 9, 10, 11, 12, 13, 14, 15],
-            ],
-            [
-                'brand_id'     => 2,
-                'slug'         => 'men-white-sweatsuit',
-                'translations' => [
-                    [
-                        'locale' => 'zh_cn',
-                        'name'   => '男士白色卫衣套装',
-                    ],
-                    [
-                        'locale' => 'en',
-                        'name'   => "Men's White Sweatsuit",
-                    ],
-                ],
-                'skus' => [
-                    [
-                        'code'         => 'MWS009',
-                        'image'        => 'images/demo/product/9.png',
-                        'price'        => 49.66,
-                        'origin_price' => null,
-                        'quantity'     => 110,
-                    ],
-                ],
-                'categories' => [1, 2, 3, 4, 5,  7, 9, 10, 11, 12, 13, 14, 15],
+                'categories' => [1,6], // افترض أن الفئة 5 هي "فيتامينات"
             ],
         ];
     }

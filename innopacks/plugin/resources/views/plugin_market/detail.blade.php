@@ -63,11 +63,11 @@
                         </div>
 
                         @if($product['downloadable'])
-                          <button class="btn btn-primary" type="button" id="btnDownload" data-product-type="plugin">立即下载</button>
+                          <button class="btn btn-primary" type="button" id="btnDownload" data-product-type="plugin">تحميل الآن</button>
                         @else
                           @include('plugin::shared._billing_method')
                           <button class="btn btn-danger" id="quickBuy" data-sku-id="{{$product['sku_id']}}"
-                                  data-product-id="{{ $product['product_id'] }}" data-billing-method="">立即购买
+                                  data-product-id="{{ $product['product_id'] }}" data-billing-method="">اشتر الآن
                           </button>
                         @endif
                       </div>
@@ -78,7 +78,7 @@
 
               <div class="row">
                 <div class="card shadow-sm border-0 p-2 p-md-4">
-                  <h4 class="mb-4">插件简介</h4>
+                  <h4 class="mb-4">مقدمة عن البرنامج الإضافي</h4>
                   {!! $product['summary'] !!}
                 </div>
               </div>

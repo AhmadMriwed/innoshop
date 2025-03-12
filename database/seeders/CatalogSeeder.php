@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -42,15 +42,15 @@ class CatalogSeeder extends Seeder
             [
                 'id'        => 1,
                 'parent_id' => 0,
-                'slug'      => 'product',
+                'slug'      => 'nutrition',
                 'position'  => 0,
                 'active'    => 1,
             ],
             [
                 'id'        => 2,
                 'parent_id' => 0,
-                'slug'      => 'industry',
-                'position'  => 0,
+                'slug'      => 'fitness',
+                'position'  => 1,
                 'active'    => 1,
             ],
         ];
@@ -64,39 +64,39 @@ class CatalogSeeder extends Seeder
         return [
             [
                 'catalog_id'       => 1,
-                'locale'           => 'zh_cn',
-                'title'            => '产品动态',
-                'summary'          => '这里是产品动态',
-                'meta_title'       => '产品动态',
-                'meta_description' => '产品动态',
-                'meta_keywords'    => '产品动态',
+                'locale'           => 'ar',
+                'title'            => 'التغذية',
+                'summary'          => 'أحدث المعلومات حول التغذية والمكملات الغذائية',
+                'meta_title'       => 'التغذية',
+                'meta_description' => 'اكتشف أحدث المعلومات حول التغذية والمكملات الغذائية',
+                'meta_keywords'    => 'تغذية, مكملات غذائية, فيتامينات',
             ],
             [
                 'catalog_id'       => 1,
                 'locale'           => 'en',
-                'title'            => 'Product Updates',
-                'summary'          => 'Here are the product updates',
-                'meta_title'       => 'Product Updates',
-                'meta_description' => 'Latest information and updates on products',
-                'meta_keywords'    => 'Product, Updates, News',
+                'title'            => 'Nutrition',
+                'summary'          => 'Latest information on nutrition and dietary supplements',
+                'meta_title'       => 'Nutrition',
+                'meta_description' => 'Discover the latest information on nutrition and dietary supplements',
+                'meta_keywords'    => 'Nutrition, Supplements, Vitamins',
             ],
             [
                 'catalog_id'       => 2,
-                'locale'           => 'zh_cn',
-                'title'            => '行业资讯',
-                'summary'          => '这里是行业资讯',
-                'meta_title'       => '行业资讯',
-                'meta_description' => '行业资讯',
-                'meta_keywords'    => '行业资讯',
+                'locale'           => 'ar',
+                'title'            => 'اللياقة البدنية',
+                'summary'          => 'أخبار ونصائح حول اللياقة البدنية والتمارين',
+                'meta_title'       => 'اللياقة البدنية',
+                'meta_description' => 'اكتشف أحدث الأخبار والنصائح حول اللياقة البدنية والتمارين',
+                'meta_keywords'    => 'لياقة بدنية, تمارين, صحة',
             ],
             [
                 'catalog_id'       => 2,
                 'locale'           => 'en',
-                'title'            => 'Industry News',
-                'summary'          => 'Here is the industry information',
-                'meta_title'       => 'Industry News',
-                'meta_description' => 'Industry information',
-                'meta_keywords'    => 'Industry News',
+                'title'            => 'Fitness',
+                'summary'          => 'News and tips on fitness and exercises',
+                'meta_title'       => 'Fitness',
+                'meta_description' => 'Discover the latest news and tips on fitness and exercises',
+                'meta_keywords'    => 'Fitness, Exercises, Health',
             ],
         ];
     }

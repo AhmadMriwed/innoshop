@@ -34,7 +34,7 @@
           @endforeach
         </div>
       @else
-        @include('shared.no-data', ['text' => '没有数据 ~'])
+        @include('shared.no-data', ['text' => 'لا يوجد بيانات ~'])
       @endif
     </div>
     <div class="col-12 col-md-3">
@@ -63,7 +63,7 @@
 
         @if(isset($tags) && $tags)
           <div class="sidebar-item">
-            <div class="sidebar-title">新闻标签</div>
+            <div class="sidebar-title">علامات الأخبار</div>
             <div class="sidebar-list">
               <ul>
                 @foreach($tags as $tag)

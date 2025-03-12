@@ -119,11 +119,11 @@
         data: @json($order['latest_week']['totals']),
         responsive: true,
         backgroundColor : orderGradient,
-        borderColor : "#3c7af7",
+        borderColor : "#FB7A04",//"#3c7af7",
         fill: true,
         lineTension: 0.4,
         datasetStrokeWidth: 3,
-        pointBackgroundColor: '#3c7af7',
+        pointBackgroundColor: "#FB7A04",//'#3c7af7',
         pointDotStrokeWidth: 4,
         pointHoverBorderWidth: 8,
         tension: 0.1

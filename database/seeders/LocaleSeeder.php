@@ -1,9 +1,9 @@
 <?php
 /**
- * Copyright (c) Since 2024 InnoShop - All Rights Reserved
+ * Copyright (c) Since 2024 Fit Boost - All Rights Reserved
  *
- * @link       https://www.innoshop.com
- * @author     InnoShop <team@innoshop.com>
+ * @link       https://www.fitboost.com
+ * @author     Fit Boost <team@fitboost.com>
  * @license    https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -29,16 +29,16 @@ class LocaleSeeder extends Seeder
     {
         return [
             [
-                'name'     => 'English',
-                'code'     => 'en',
-                'image'    => 'images/flag/en.png',
+                'name'     => 'العربية',
+                'code'     => 'ar',
+                'image'    => 'images/flag/ar.png',
                 'position' => 0,
                 'active'   => 1,
             ],
             [
-                'name'     => '简体中文',
-                'code'     => 'zh_cn',
-                'image'    => 'images/flag/zh_cn.png',
+                'name'     => 'English',
+                'code'     => 'en',
+                'image'    => 'images/flag/en.png',
                 'position' => 1,
                 'active'   => 1,
             ],
