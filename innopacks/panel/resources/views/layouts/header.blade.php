@@ -6,8 +6,10 @@
     </a>
   </div>
   <div class="d-flex justify-content-end right-tool">
-    <div class="header-item dropdown d-flex align-items-center d-none d-lg-flex">
-      <div class="wh-20 me-2"><img src="{{ image_origin('images/flag/'. panel_locale_code().'.png') }}" class="img-fluid"></div>
+  <div class="header-item dropdown d-flex align-items-center">
+
+<!-- <div class="header-item dropdown d-flex align-items-center d-none d-lg-flex"> -->
+   <div class="wh-20 me-2"><img src="{{ image_origin('images/flag/'. panel_locale_code().'.png') }}" class="img-fluid"></div>
       <span class="">{{ current_panel_locale()['name'] }} <i class="bi bi-chevron-down"></i></span>
       <ul class="dropdown-menu">
         @foreach (panel_locales() as $locale)
